@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.member-list {
+  background-color: #fff;
+  border-top: 0.01333rem solid #ededed;
+  border-bottom: 0.01333rem solid #ededed; }
+
+.member-list-tabs {
+  display: flex; }
+  .member-list-tabs .tabs-item {
+    flex: 1;
+    display: block;
+    padding: 0.26667rem 0 0.4rem 0;
+    position: relative; }
+    .member-list-tabs .tabs-item:active {
+      background-color: rgba(125, 125, 125, 0.1) !important; }
+    .member-list-tabs .tabs-item:after {
+      content: '';
+      width: 0.01333rem;
+      background-color: #ededed;
+      display: block;
+      position: absolute;
+      top: 0.48rem;
+      right: 0;
+      bottom: 0.48rem; }
+    .member-list-tabs .tabs-item:last-child:after {
+      display: none; }
+    .member-list-tabs .tabs-item .icon,
+    .member-list-tabs .tabs-item .p {
+      display: block; }
+    .member-list-tabs .tabs-item .icon {
+      font-size: 0.8rem;
+      text-align: center; }
+    .member-list-tabs .tabs-item .p {
+      line-height: 1; }

@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.merchant-header {
+  position: relative;
+  color: #fff;
+  background-color: rgba(7, 17, 27, 0.5); }
+
+.merchant-header .header-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  filter: blur(10px);
+  z-index: -1; }
+
+.merchant-header .good-item {
+  padding: 0.64rem 0.64rem 0.48rem 0.64rem;
+  position: relative; }
+
+.merchant-header .good-item .goods-item-avator .img {
+  border-radius: 0.05333rem; }
+
+.merchant-header .good-item .good-item-detail .text {
+  color: #fff; }
+
+.merchant-header .good-item .brand-badge {
+  width: 0.8rem;
+  height: 0.48rem;
+  background: url("./brand@2x.png");
+  background-size: 100% 100%;
+  display: inline-block; }
+
+.merchant-header .good-item .action-line {
+  font-size: 0; }
+
+.merchant-header .good-item .action-line .action-badge {
+  width: 0.32rem;
+  height: 0.32rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block; }
+
+.merchant-header .good-item .action-line .action-badge.decrease {
+  background-image: url("decrease_1@2x.png"); }
+
+.merchant-header .good-item .action-line .action-badge.discount {
+  background-image: url("discount_1@2x.png"); }
+
+.merchant-header .good-item .action-line .action-badge.guarantee {
+  background-image: url("guarantee_1@2x.png"); }
+
+.merchant-header .good-item .action-line .action-badge.invoice {
+  background-image: url("invoice_1@2x.png"); }
+
+.merchant-header .good-item .action-line .action-badge.special {
+  background-image: url("special_1@2x.png"); }
+
+.merchant-header .good-item .action-line .action-text {
+  font-size: 0.26667rem; }
+
+.merchant-header .action-link {
+  line-height: 0.64rem;
+  border-radius: 0.32rem;
+  font-size: 0.26667rem;
+  padding: 0 0.21333rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0.32rem;
+  bottom: 0.42667rem; }
+
+.merchant-header .merchant-ad {
+  height: 0.74667rem;
+  padding: 0 0.32rem;
+  background-color: rgba(7, 17, 27, 0.2);
+  display: flex;
+  align-items: center; }
+
+.merchant-header .merchant-ad .ad-badge {
+  width: 0.58667rem;
+  height: 0.32rem;
+  margin-right: 0.10667rem;
+  background-repeat: no-repeat;
+  background-image: url("bulletin@2x.png");
+  background-size: 100% 100%;
+  display: inline-block; }
+
+.merchant-header .merchant-ad .ad-text {
+  flex-grow: 1;
+  flex-basis: 0;
+  font-size: 0.26667rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.merchant-header .merchant-ad-alert {
+  background-color: rgba(7, 17, 27, 0.8);
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 400; }
+
+.merchant-header .merchant-ad-alert .ad-alert-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(10px); }
+
+.merchant-header .merchant-ad-alert .ad-alert-container {
+  min-height: 100%;
+  padding: 1.70667rem 0.96rem 2.24rem;
+  box-sizing: border-box;
+  position: relative; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .h3 {
+  font-size: 0.42667rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .stars-panel {
+  margin-top: 0.42667rem;
+  justify-content: center; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .stars-panel .back-star {
+  color: #d4d6d9; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .coupon-list {
+  margin-top: 0.4rem;
+  padding: 0 0.32rem; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .title-decorate {
+  font-size: 0.4rem;
+  position: relative;
+  margin-top: 0.74667rem;
+  display: flex;
+  align-items: center; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .title-decorate .line {
+  flex-grow: 1;
+  flex-basis: 0;
+  border-bottom: 0.01333rem solid rgba(255, 255, 255, 0.2);
+  display: inline-block; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .title-decorate .text {
+  padding: 0 0.37333rem; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line {
+  font-size: 0; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-badge {
+  width: 0.42667rem;
+  height: 0.42667rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-badge.decrease {
+  background-image: url("decrease_2@2x.png"); }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-badge.discount {
+  background-image: url("discount_2@2x.png"); }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-badge.guarantee {
+  background-image: url("guarantee_2@2x.png"); }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-badge.invoice {
+  background-image: url("invoice_2@2x.png"); }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-badge.special {
+  background-image: url("special_2@2x.png"); }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .action-line .action-text {
+  line-height: 0.42667rem;
+  font-size: 0.32rem; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .merchant-notice {
+  padding: 0.64rem 0.32rem 0;
+  line-height: 0.64rem; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .close {
+  text-align: center;
+  font-size: 0.85333rem;
+  position: absolute;
+  right: 0;
+  bottom: 0.85333rem;
+  left: 0; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .close .icon {
+  padding: 0.13333rem;
+  display: inline-block; }
+
+.merchant-header .merchant-ad-alert .ad-alert-container .close .icon:active {
+  background-color: rgba(125, 125, 125, 0.1) !important; }
+
+.merchant-header .collection {
+  font-size: 0.64rem;
+  color: #fff;
+  padding: 0.26667rem;
+  position: absolute;
+  top: 0.26667rem;
+  right: 0; }
+
+.merchant-header .collection:active {
+  background-color: rgba(125, 125, 125, 0.1) !important; }
+
+.merchant-header .collection.active {
+  color: #f9c22f; }

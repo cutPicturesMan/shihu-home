@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.food-detail .food-img {
+  background-color: #fff; }
+  .food-detail .food-img .img {
+    height: 10rem;
+    display: block; }
+
+.food-detail .food-summary {
+  padding: 0.48rem;
+  background-color: #fff;
+  position: relative; }
+  .food-detail .food-summary .title {
+    line-height: 1;
+    font-size: 0.37333rem;
+    color: #07111b; }
+  .food-detail .food-summary .sell {
+    font-size: 0.26667rem;
+    color: #93999f; }
+  .food-detail .food-summary .add-cart-badge {
+    line-height: 0.64rem;
+    font-size: 0.26667rem;
+    padding: 0 0.32rem;
+    border-radius: 0.32rem;
+    background-color: #f9c22f;
+    color: #fff;
+    position: absolute;
+    right: 0.48rem;
+    bottom: 0.48rem; }
+    .food-detail .food-summary .add-cart-badge:active {
+      background-color: rgba(125, 125, 125, 0.1) !important; }
+
+.food-detail .food-intro {
+  padding: 0.48rem;
+  background-color: #fff; }
+  .food-detail .food-intro .intro-title {
+    font-size: 0.37333rem;
+    color: #07111b; }
+  .food-detail .food-intro .p {
+    line-height: 0.64rem;
+    color: #4d555d;
+    padding-left: 0.21333rem;
+    margin-top: 0.16rem; }

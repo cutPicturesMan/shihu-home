@@ -1,0 +1,16 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+.action-badge{
+	$w:rem(32px);
+	min-width: $w;
+	line-height: $w;
+	border-radius: rem(3px);
+	padding:0 rem(7px);
+	font-size:fsrem(18px);	
+	text-align: center;
+	color:#fff;
+
+	box-sizing:border-box;
+	display: inline-block;
+}

@@ -1,0 +1,152 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+// 小购物车
+.cart-mini{
+	height:rem(96px);
+	position:absolute;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color: #141d27;
+	display: flex;
+
+	z-index: 200;
+
+	// 达到起送价
+	&.active{
+		.cart-count{
+			color:#fff;
+			background-color: #f9c22f;
+		}
+		.cart-calc{
+			.price{
+				color:#fff;
+			}
+		}
+		.cart-confirm{
+			color:#fff;
+			background-color: #f9c22f;
+		}
+	}
+
+	// 显示详情
+	&.show{
+		.mini-list{
+			transform:translateY(-100%);
+		}
+	}
+
+	.mini-count{ 
+		border-radius: 50%;
+		background-color: #141d27;
+		color:rgba(255, 255, 255, .4);
+		margin:rem(-20px) rem(24px) 0 rem(24px);
+		position: relative;
+		.badge{
+			$space:rem(8px);
+			position: absolute;
+			top:$space;
+			right:$space;
+		}
+		.icon{
+			font-size:fsrem(48px);
+			$w:rem(88px);
+			width:$w;
+			height:$w;
+			border-radius: 50%;
+			border:rem(12px) solid #141d27;
+			background-color: rgba(255, 255, 255, .1);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.mini-calc{
+		flex:1;
+		display: flex;
+		align-items: center;
+
+		color:rgba(255, 255, 255, .4);
+		padding-right:rem(20px);
+		.price{
+			font-size:fsrem(32px);
+			display: inline-block;
+		}
+		.line{
+			height: rem(48px);
+			border-right:rem(1px) solid rgba(255, 255, 255, .1);
+			margin:0 rem(20px);
+		}
+		.send{
+			font-size:fsrem(20px);
+		}
+	}
+
+	.mini-confirm{
+		width:rem(210px);
+		background-color: #2b333b;
+		color:rgba(255, 255, 255, .4);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include ellipsis();
+	}
+
+	// 购物车详情
+	.mini-list{
+		position:absolute;
+		top:0;
+		right:0;
+		left:0;
+		background-color: #fff;
+		z-index:-1;
+
+		.list-title{
+			line-height: rem(75px);
+			padding: 0 rem(35px);
+			background-color: #f3f5f7;
+			border-bottom: rem(2px) solid #dbdee1;
+			display: flex;
+			h3{
+				font-size: fsrem(28px);
+				flex:1;
+			}
+			.clear{
+				@include active();
+			}
+		}
+		.list-detail{
+			max-height: rem(435px);
+			overflow: scroll;
+			.item{
+				height:rem(94px);
+				margin:0 rem(35px);
+				border-bottom:rem(1px) solid #e6e7e8;
+				display: flex;
+				align-items: center;
+				.name{
+					font-size: fsrem(28px);
+					margin-right: rem(28px);
+					flex:1;
+					@include ellipsis();
+				}
+				.price{
+					margin-right: rem(28px);
+				}
+			}
+		}
+	}
+	.mini-bg{
+		position:fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		background-color: rgba(7, 17, 27, .6);
+		backdrop-filter: blur(10px);
+		z-index:-2;
+	}
+}

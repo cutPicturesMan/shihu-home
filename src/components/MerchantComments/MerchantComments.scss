@@ -1,0 +1,113 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+// 商家评价
+.merchant-comments{
+}
+// 商家评分
+.comments-grade{
+	padding:rem(35px) 0;
+	display: flex;
+	.grade-total,
+	.grade-stars{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.grade-total{
+		width:rem(275px);
+		align-items: center;
+		border-right:rem(1px) solid $bd-gray;
+		.num{
+			line-height: rem(56px);
+			font-size: fsrem(48px);
+			color:$energized;
+		}
+		.p{
+			margin-top: rem(12px);
+		}
+	}
+	.grade-stars{
+		flex-grow: 1;
+		flex-basis: 0;
+		padding-left: rem(50px);
+		.item{
+			line-height: rem(36px);
+			display: flex;
+			.stars-panel{
+				font-size: fsrem(30px);
+				.stars-item{
+					margin:0 rem(6px);
+				}
+			}
+		}
+	}
+}
+// 评价内容
+.comments-wrapper{
+	$space: rem(36px);
+	.comments-tabs{
+		padding: $space;
+		.tab-item{
+			line-height: rem(64px);
+			padding: 0 rem(24px);
+			margin-right: rem(10px);
+			color: #4d555d;
+			background-color: rgba(249, 194, 47, .3);
+			display: inline-block;
+			&.active{
+				background-color: $energized-light;
+			}
+			&.unsatify{
+				background-color: #eee;
+			}
+			small{
+				margin-left: rem(10px);
+				font-size: fsrem(16px);
+			}
+		}
+	}
+	.comments-item{
+		padding:$space 0;
+		margin:0 $space;
+		display: flex;
+		.user-avator{
+			margin-right:rem(24px);
+			.img{
+				$w: rem(56px);
+				width: $w;
+				height: $w;
+				border-radius: 50%;
+			}
+		}
+		.comments-detail{
+			flex:1;
+			.title{
+				font-size: fsrem(20px);
+				display: flex;
+				.name{
+					flex:1;
+				}
+				.time{
+					color:#999;
+				}
+			}
+			.sell{
+				color:#999;
+				margin-top:rem(8px);
+				display: flex;
+				.stars-panel{
+					font-size: fsrem(24px);
+					margin-right:rem(10px);
+					.stars-item{
+						margin:0 rem(2px);
+					}
+				}
+			}
+			.text{
+				line-height: rem(36px);
+				margin-top:rem(12px);
+			}
+		}
+	}
+}

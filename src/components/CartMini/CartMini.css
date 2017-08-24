@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.cart-mini {
+  height: 1.28rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #141d27;
+  display: flex;
+  z-index: 200; }
+  .cart-mini.active .cart-count {
+    color: #fff;
+    background-color: #f9c22f; }
+  .cart-mini.active .cart-calc .price {
+    color: #fff; }
+  .cart-mini.active .cart-confirm {
+    color: #fff;
+    background-color: #f9c22f; }
+  .cart-mini.show .mini-list {
+    transform: translateY(-100%); }
+  .cart-mini .mini-count {
+    border-radius: 50%;
+    background-color: #141d27;
+    color: rgba(255, 255, 255, 0.4);
+    margin: -0.26667rem 0.32rem 0 0.32rem;
+    position: relative; }
+    .cart-mini .mini-count .badge {
+      position: absolute;
+      top: 0.10667rem;
+      right: 0.10667rem; }
+    .cart-mini .mini-count .icon {
+      font-size: 0.64rem;
+      width: 1.17333rem;
+      height: 1.17333rem;
+      border-radius: 50%;
+      border: 0.16rem solid #141d27;
+      background-color: rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .cart-mini .mini-calc {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.4);
+    padding-right: 0.26667rem; }
+    .cart-mini .mini-calc .price {
+      font-size: 0.42667rem;
+      display: inline-block; }
+    .cart-mini .mini-calc .line {
+      height: 0.64rem;
+      border-right: 0.01333rem solid rgba(255, 255, 255, 0.1);
+      margin: 0 0.26667rem; }
+    .cart-mini .mini-calc .send {
+      font-size: 0.26667rem; }
+  .cart-mini .mini-confirm {
+    width: 2.8rem;
+    background-color: #2b333b;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .cart-mini .mini-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1; }
+    .cart-mini .mini-list .list-title {
+      line-height: 1rem;
+      padding: 0 0.46667rem;
+      background-color: #f3f5f7;
+      border-bottom: 0.02667rem solid #dbdee1;
+      display: flex; }
+      .cart-mini .mini-list .list-title h3 {
+        font-size: 0.37333rem;
+        flex: 1; }
+      .cart-mini .mini-list .list-title .clear:active {
+        background-color: rgba(125, 125, 125, 0.1) !important; }
+    .cart-mini .mini-list .list-detail {
+      max-height: 5.8rem;
+      overflow: scroll; }
+      .cart-mini .mini-list .list-detail .item {
+        height: 1.25333rem;
+        margin: 0 0.46667rem;
+        border-bottom: 0.01333rem solid #e6e7e8;
+        display: flex;
+        align-items: center; }
+        .cart-mini .mini-list .list-detail .item .name {
+          font-size: 0.37333rem;
+          margin-right: 0.37333rem;
+          flex: 1;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .cart-mini .mini-list .list-detail .item .price {
+          margin-right: 0.37333rem; }
+  .cart-mini .mini-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(7, 17, 27, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: -2; }

@@ -1,0 +1,44 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+// 购物车按钮
+.cart-handle{
+	$space:rem(10px);
+	margin:0 - $space;
+	display: flex; 
+	align-items: center;
+
+	.cart-reduce,
+	.cart-add{
+		padding:$space;
+
+		.icon{
+			font-size:fsrem(38px);
+			border-radius: 50%;
+			display: inline-block;
+			border:rem(5px) solid;
+			&:active{
+				background-color: rgba(125, 125, 125, .1) !important;
+				border-color: transparent;
+			}
+		}
+	}
+	.cart-reduce{
+		.icon{
+			border-color: $stable;
+			color:$stable;
+		}
+	}
+	.cart-num{
+		min-width: rem(30px);
+		text-align: center;
+	}
+	.cart-add{
+		color:#fff;
+		.icon{
+			border-color: $energized-light;
+			background-color: $energized-light;
+		}
+	}
+}
+

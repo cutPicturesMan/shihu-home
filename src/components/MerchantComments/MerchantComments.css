@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.comments-grade {
+  padding: 0.46667rem 0;
+  display: flex; }
+
+.comments-grade .grade-total,
+.comments-grade .grade-stars {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.comments-grade .grade-total {
+  width: 3.66667rem;
+  align-items: center;
+  border-right: 0.01333rem solid #ededed; }
+
+.comments-grade .grade-total .num {
+  line-height: 0.74667rem;
+  font-size: 0.64rem;
+  color: #fa952f; }
+
+.comments-grade .grade-total .p {
+  margin-top: 0.16rem; }
+
+.comments-grade .grade-stars {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-left: 0.66667rem; }
+
+.comments-grade .grade-stars .item {
+  line-height: 0.48rem;
+  display: flex; }
+
+.comments-grade .grade-stars .item .stars-panel {
+  font-size: 0.4rem; }
+
+.comments-grade .grade-stars .item .stars-panel .stars-item {
+  margin: 0 0.08rem; }
+
+.comments-wrapper .comments-tabs {
+  padding: 0.48rem; }
+
+.comments-wrapper .comments-tabs .tab-item {
+  line-height: 0.85333rem;
+  padding: 0 0.32rem;
+  margin-right: 0.13333rem;
+  color: #4d555d;
+  background-color: rgba(249, 194, 47, 0.3);
+  display: inline-block; }
+
+.comments-wrapper .comments-tabs .tab-item.active {
+  background-color: #f9c22f; }
+
+.comments-wrapper .comments-tabs .tab-item.unsatify {
+  background-color: #eee; }
+
+.comments-wrapper .comments-tabs .tab-item small {
+  margin-left: 0.13333rem;
+  font-size: 0.21333rem; }
+
+.comments-wrapper .comments-item {
+  padding: 0.48rem 0;
+  margin: 0 0.48rem;
+  display: flex; }
+
+.comments-wrapper .comments-item .user-avator {
+  margin-right: 0.32rem; }
+
+.comments-wrapper .comments-item .user-avator .img {
+  width: 0.74667rem;
+  height: 0.74667rem;
+  border-radius: 50%; }
+
+.comments-wrapper .comments-item .comments-detail {
+  flex: 1; }
+
+.comments-wrapper .comments-item .comments-detail .title {
+  font-size: 0.26667rem;
+  display: flex; }
+
+.comments-wrapper .comments-item .comments-detail .title .name {
+  flex: 1; }
+
+.comments-wrapper .comments-item .comments-detail .title .time {
+  color: #999; }
+
+.comments-wrapper .comments-item .comments-detail .sell {
+  color: #999;
+  margin-top: 0.10667rem;
+  display: flex; }
+
+.comments-wrapper .comments-item .comments-detail .sell .stars-panel {
+  font-size: 0.32rem;
+  margin-right: 0.13333rem; }
+
+.comments-wrapper .comments-item .comments-detail .sell .stars-panel .stars-item {
+  margin: 0 0.02667rem; }
+
+.comments-wrapper .comments-item .comments-detail .text {
+  line-height: 0.48rem;
+  margin-top: 0.16rem; }

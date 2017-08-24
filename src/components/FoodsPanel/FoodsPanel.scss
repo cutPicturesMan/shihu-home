@@ -1,0 +1,94 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+// 食物面板
+.foods-panel{
+	height:rem(500px);
+	position: relative;
+	display: flex;
+	.panel-nav,
+	.panel-lists{
+		padding-bottom:rem(106px);
+		overflow: scroll;
+	}
+	.panel-nav{
+		width:rem(160px);
+		color:#333;
+		background-color: #f3f5f7;
+		.nav-item{
+			$plr: rem(24px);
+			min-height: rem(108px);	
+			line-height: rem(28px);
+			padding:rem(25px) $plr;
+			position: relative;
+			box-sizing: border-box;
+
+			display: flex;
+			align-items: center;
+			&.active{
+				background-color: #fff;
+				&:after{
+					display:none;
+				};
+			}
+			&:last-child{
+				&:after{
+					display:none;
+				};
+			}
+			&:after{
+				content:' ';
+				position: absolute;
+				right:$plr;
+				bottom:0;
+				left:$plr;
+				border-bottom:rem(1px) solid $bd-gray;
+				display: inline-block;
+			};
+		}
+	}
+	.panel-lists{
+		flex:1;
+		.foods-category{
+			.category-title{
+				line-height:rem(52px);
+				color:#999;
+				font-size:fsrem(24px);
+				padding-left:rem(22px);
+				border-left:rem(4px) solid #d9dde1;
+				background-color: #f3f5f7;
+			}
+			.category-list{
+				.good-item{
+					$space:rem(36px);
+
+					position: relative;
+					margin:$space $space 0 $space; 
+					padding:0;
+					padding-bottom:$space;
+					&:last-child{
+						border:0;
+					}
+
+					.good-item-avator{
+						.img{
+							$w:rem(114px);
+							width:$w;
+							height:$w;		
+						}
+					}
+					.good-item-detail{
+						.title{
+							font-size: fsrem(28px);				
+						}
+					}
+					.cart-handle{
+						position: absolute;
+						right:rem(-10px);
+						bottom:rem(20px);
+					}
+				}
+			}
+		}
+	}
+}

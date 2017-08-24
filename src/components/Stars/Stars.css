@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.stars-panel {
+  font-size: 0.53333rem;
+  display: flex; }
+
+.stars-panel .stars-item {
+  margin: 0 0.26667rem;
+  position: relative; }
+
+.stars-panel .stars-item .back-star {
+  color: #d4d6d9; }
+
+.stars-panel .stars-item .front-star {
+  color: #ff9900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.cart-handle {
+  margin: -0.13333rem;
+  display: flex;
+  align-items: center; }
+  .cart-handle .cart-reduce,
+  .cart-handle .cart-add {
+    padding: 0.13333rem; }
+    .cart-handle .cart-reduce .icon,
+    .cart-handle .cart-add .icon {
+      font-size: 0.50667rem;
+      border-radius: 50%;
+      display: inline-block;
+      border: 0.06667rem solid; }
+      .cart-handle .cart-reduce .icon:active,
+      .cart-handle .cart-add .icon:active {
+        background-color: rgba(125, 125, 125, 0.1) !important;
+        border-color: transparent; }
+  .cart-handle .cart-reduce .icon {
+    border-color: #d5d5d5;
+    color: #d5d5d5; }
+  .cart-handle .cart-num {
+    min-width: 0.4rem;
+    text-align: center; }
+  .cart-handle .cart-add {
+    color: #fff; }
+    .cart-handle .cart-add .icon {
+      border-color: #f9c22f;
+      background-color: #f9c22f; }

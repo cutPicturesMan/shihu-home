@@ -1,0 +1,243 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+// 商家头部 
+.merchant-header{
+	position: relative;
+	color:#fff;
+	background-color:rgba(7, 17, 27, .5);
+	.header-bg{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		filter:blur(10px); 
+		z-index:-1;
+	} 
+	.good-item{ 
+		padding:rem(48px) rem(48px) rem(36px) rem(48px);
+		position: relative;
+		.goods-item-avator{
+			.img{
+				border-radius: rem(4px);
+			}
+		}
+		.good-item-detail{ 
+			.text{
+				color:#fff;
+			}
+		}
+
+		// 品牌
+		.brand-badge{
+			width:rem(60px);
+			height:rem(36px);
+			background: bgImg('./brand');
+			background-size: 100% 100%;
+			display: inline-block;
+		}
+
+		// 商户活动 
+		.action-line{
+			font-size: 0;
+			.action-badge{
+				$w:rem(24px);
+				width:$w;
+				height:$w;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				display: inline-block;
+
+				&.decrease{
+					background-image: bgImg('decrease_1');
+				}
+				&.discount{
+					background-image: bgImg('discount_1');
+				}
+				&.guarantee{
+					background-image: bgImg('guarantee_1');
+				}
+				&.invoice{
+					background-image: bgImg('invoice_1');
+				}
+				&.special{
+					background-image: bgImg('special_1');
+				}
+			}
+			.action-text{
+				font-size: fsrem(20px);
+			}
+		}
+	}
+	// 活动链接
+	.action-link{
+		$h:rem(48px);
+		line-height: $h;
+		border-radius: $h/2;
+		font-size: fsrem(20px);
+		padding:0 rem(16px);
+		background-color: rgba(0, 0, 0, .2);
+		position:absolute;
+		right:rem(24px);
+		bottom:rem(32px);
+	}
+	// 商家广告
+	.merchant-ad{
+		height:rem(56px);
+		padding:0 rem(24px);
+		background-color:rgba(7, 17, 27, .2);
+		display: flex;
+		align-items: center;
+		.ad-badge{
+			width:rem(44px);
+			height:rem(24px);
+			margin-right:rem(8px);
+			background-repeat: no-repeat;
+			background-image: bgImg('bulletin');
+			background-size: 100% 100%;
+			display: inline-block;
+		}
+		.ad-text{
+			flex-grow:1;
+			flex-basis:0;
+			font-size:fsrem(20px);
+			@include ellipsis();
+		}
+		.ad-icon{
+			
+		}
+	}
+	// 广告弹窗层
+	.merchant-ad-alert{
+		$close-fs:rem(64px);
+		$close-bt:rem(64px);
+		$close-pd:rem(10px);
+		$pd: $close-fs + $close-bt + $close-pd * 4;
+
+		background-color: rgba(7, 17, 27, .8);
+		overflow:scroll;
+		position:fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index:400;
+
+		.ad-alert-bg{
+			position: absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			z-index:-1;
+			filter: blur(10px);
+		}
+
+		.ad-alert-container{
+			min-height: 100%;
+			padding:rem(128px) rem(72px) $pd;
+			box-sizing: border-box;
+			position: relative;
+			.h3{
+				font-size:fsrem(32px);
+				font-weight: 700;
+				line-height: 1;
+				text-align: center;
+			}
+			.stars-panel{
+				margin-top: rem(32px);
+				justify-content: center;
+				.back-star{
+					color: #d4d6d9;
+				}
+			}
+			.coupon-list{
+				margin-top:rem(30px);
+				padding:0 rem(24px);
+			}
+			.title-decorate{
+				font-size: fsrem(30px);
+				position: relative;
+				margin-top:rem(56px);
+				display: flex;
+				align-items: center;
+				.line{
+					flex-grow: 1;
+					flex-basis: 0;
+					border-bottom:rem(1px) solid rgba(255, 255, 255, .2);
+					display: inline-block;
+				}
+				.text{
+					padding:0 rem(28px);
+				}
+			}
+			// 商户活动
+			.action-line{
+				font-size:0;
+				.action-badge{
+					$w:rem(32px);
+					width:$w;
+					height:$w;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					display: inline-block;
+
+					&.decrease{
+						background-image: bgImg('decrease_2');
+					}
+					&.discount{
+						background-image: bgImg('discount_2');
+					}
+					&.guarantee{
+						background-image: bgImg('guarantee_2');
+					}
+					&.invoice{
+						background-image: bgImg('invoice_2');
+					}
+					&.special{
+						background-image: bgImg('special_2');
+					}
+				}
+				.action-text{
+					line-height: rem(32px);
+					font-size:fsrem(24px);
+				}
+			}
+			.merchant-notice{
+				padding:rem(48px) rem(24px) 0;
+				line-height: rem(48px);
+			}
+			.close{
+				text-align: center;
+				font-size:$close-fs;
+				position:absolute;
+				right:0;
+				bottom:$close-bt;
+				left:0;
+				.icon{
+					padding:$close-pd;
+					display: inline-block; 
+					@include active();
+				}
+			}
+		}
+	}
+	// 添加收藏
+	.collection{
+		font-size: fsrem(48px);
+		color:#fff;
+		padding:rem(20px);
+		position: absolute;
+		top:rem(20px);
+		right:0;
+		@include active();
+		&.active{	
+			color:$energized-light;
+		}
+	}
+}
+

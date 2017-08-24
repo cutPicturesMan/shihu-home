@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.app-footer {
+  height: 1.17333rem;
+  border-top: 0.01333rem solid #ededed;
+  background-color: #f9f9f9;
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 400; }
+  .app-footer .footer-item {
+    flex: 1;
+    padding-top: 0.13333rem;
+    display: block; }
+    .app-footer .footer-item:active {
+      background-color: rgba(125, 125, 125, 0.1) !important; }
+    .app-footer .footer-item.active {
+      color: #fdca00; }
+    .app-footer .footer-item span {
+      display: block; }
+    .app-footer .footer-item .icon {
+      font-size: 0.56rem;
+      text-align: center; }
+    .app-footer .footer-item .text {
+      line-height: 1;
+      font-size: 0.26667rem;
+      margin-top: 0.09333rem;
+      text-align: center; }

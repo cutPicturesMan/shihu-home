@@ -1,0 +1,46 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+.member-list{
+	background-color: #fff;
+	border-top:rem(1px) solid $bd-gray;
+	border-bottom:rem(1px) solid $bd-gray;
+}
+.member-list-tabs{
+	display: flex;
+	.tabs-item{
+		flex:1;
+		display: block;
+		padding:rem(20px) 0 rem(30px) 0;
+		position: relative;
+		@include active();
+		&:after{ 
+			content:'';
+			width:rem(1px);
+			background-color: $bd-gray;
+			display: block;
+			
+			position: absolute;
+			$dist:rem(36px);
+			top:$dist;
+			right:0;
+			bottom:$dist;
+		}
+		&:last-child{
+			&:after{ 
+				display: none;
+			}
+		}
+		.icon,
+		.p{
+			display: block;
+		}
+		.icon{
+			font-size:fsrem(60px);
+			text-align: center;
+		}
+		.p{
+			line-height: 1;
+		}
+	}
+}

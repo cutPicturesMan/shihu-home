@@ -1,0 +1,56 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+// 菜品详情页
+.food-detail{
+	.food-img{
+		background-color: #fff; 
+		.img{
+			height:rem(750px);
+			display: block;
+		}
+	}
+	.food-summary{
+		$space: rem(36px);
+		padding: $space;
+		background-color: #fff;
+		position: relative;
+		.title{
+			line-height: 1;
+			font-size: fsrem(28px);
+			color: rgb(7, 17, 27);
+		}
+		.sell{ 
+			font-size: fsrem(20px);
+			color:#93999f;
+		}
+		.add-cart-badge{
+			$w: rem(48px);
+			line-height: $w;
+			font-size:fsrem(20px);
+			padding:0 $w/2;
+			border-radius: $w/2;
+			background-color: $energized-light;
+			color:#fff;
+			@include active();
+
+			position: absolute;
+			right: $space;
+			bottom: $space;
+		}
+	}
+	.food-intro{
+		padding:rem(36px);
+		background-color: #fff;
+		.intro-title{
+			font-size:fsrem(28px);
+			color:#07111b;
+		}
+		.p{
+			line-height: rem(48px);
+			color:rgb(77, 85, 93);
+			padding-left: rem(16px);
+			margin-top: rem(12px);
+		}
+	}
+}

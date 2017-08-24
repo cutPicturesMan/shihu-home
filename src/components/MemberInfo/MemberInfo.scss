@@ -1,0 +1,45 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+.member-info{
+	font-size:fsrem(32px);
+	height:rem(350px);
+	padding-top: rem(50px);
+	box-sizing: border-box;
+	background: url(../../imgs/member-info-bg.jpg); 
+	position: relative;
+
+	.member-setting{
+		font-size:fsrem(44px);
+		position:absolute;
+		top:0;
+		right:0;
+		color:#fff;
+		padding:rem(35px);
+		@include active();
+	}
+
+	.member-info-avatar{
+		$w:rem(150px);
+		width:$w;
+		height:$w;
+		margin:0 auto;
+		line-height: $w;
+		text-align: center;
+		border-radius: 50%;
+		border:rem(6px) solid #faf0c3;
+		overflow:hidden;
+
+		font-size:fsrem(80px);
+		background-color: #eee;
+		img{
+			display: block;
+			width:100%;
+			height:100%;
+		}
+	}
+	.p{
+		text-align: center;
+		font-size:fsrem(32px);
+	}
+}

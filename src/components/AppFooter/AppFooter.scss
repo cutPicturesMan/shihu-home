@@ -1,0 +1,39 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+.app-footer{
+	height:rem(88px);
+	border-top:rem(1px) solid $bd-gray;
+	background-color: #f9f9f9;
+	display: flex;
+
+	position:fixed;
+	right:0;
+	bottom:0;
+	left:0;
+
+	z-index:400;
+
+	.footer-item{
+		flex:1; 
+		padding-top: rem(10px);
+		display: block;
+		@include active();  
+		&.active{
+			color:$yellow;
+		}
+		span{
+			display: block;
+		}
+		.icon{
+			font-size:fsrem(42px);
+			text-align: center;
+		}
+		.text{
+			line-height: 1;
+			font-size:fsrem(20px);
+			margin-top:rem(7px);
+			text-align: center;
+		}
+	}
+}

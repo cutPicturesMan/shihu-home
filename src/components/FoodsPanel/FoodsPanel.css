@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/*基准尺寸，设计稿psd的宽度/10，本psd中宽度为750px*/
+/*点击态的背景*/
+/*字体超出变省略号*/
+/*定位*/
+/* 实心三角形
+ * 参数有4个
+ * $tb : 上下边框宽
+ * $lr : 左右边框宽
+ * $direction : 三角形指向(top, right, bottom, left)
+ * $color : 三角形颜色
+ */
+.foods-panel {
+  height: 6.66667rem;
+  position: relative;
+  display: flex; }
+  .foods-panel .panel-nav,
+  .foods-panel .panel-lists {
+    padding-bottom: 1.41333rem;
+    overflow: scroll; }
+  .foods-panel .panel-nav {
+    width: 2.13333rem;
+    color: #333;
+    background-color: #f3f5f7; }
+    .foods-panel .panel-nav .nav-item {
+      min-height: 1.44rem;
+      line-height: 0.37333rem;
+      padding: 0.33333rem 0.32rem;
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center; }
+      .foods-panel .panel-nav .nav-item.active {
+        background-color: #fff; }
+        .foods-panel .panel-nav .nav-item.active:after {
+          display: none; }
+      .foods-panel .panel-nav .nav-item:last-child:after {
+        display: none; }
+      .foods-panel .panel-nav .nav-item:after {
+        content: ' ';
+        position: absolute;
+        right: 0.32rem;
+        bottom: 0;
+        left: 0.32rem;
+        border-bottom: 0.01333rem solid #ededed;
+        display: inline-block; }
+  .foods-panel .panel-lists {
+    flex: 1; }
+    .foods-panel .panel-lists .foods-category .category-title {
+      line-height: 0.69333rem;
+      color: #999;
+      font-size: 0.32rem;
+      padding-left: 0.29333rem;
+      border-left: 0.05333rem solid #d9dde1;
+      background-color: #f3f5f7; }
+    .foods-panel .panel-lists .foods-category .category-list .good-item {
+      position: relative;
+      margin: 0.48rem 0.48rem 0 0.48rem;
+      padding: 0;
+      padding-bottom: 0.48rem; }
+      .foods-panel .panel-lists .foods-category .category-list .good-item:last-child {
+        border: 0; }
+      .foods-panel .panel-lists .foods-category .category-list .good-item .good-item-avator .img {
+        width: 1.52rem;
+        height: 1.52rem; }
+      .foods-panel .panel-lists .foods-category .category-list .good-item .good-item-detail .title {
+        font-size: 0.37333rem; }
+      .foods-panel .panel-lists .foods-category .category-list .good-item .cart-handle {
+        position: absolute;
+        right: -0.13333rem;
+        bottom: 0.26667rem; }

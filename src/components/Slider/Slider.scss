@@ -1,0 +1,13 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+
+// 轮播图
+.app-slider{
+	$h:rem(300px);
+	height:$h;
+	.ad-photo{
+		height:$h;
+		display: block;
+	}
+}
+

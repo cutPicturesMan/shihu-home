@@ -1,0 +1,21 @@
+@import '../../scss/base/_mixin.scss';
+@import '../../scss/base/_variable.scss';
+// 订单头部
+.list-top{
+	
+}
+
+.each-list{
+	background-color: #fff;
+	.each-list-detail{
+		padding:rem(25px);
+		padding-left:rem(95px);
+		.detail-line{
+			display: flex;
+
+			.title{
+				flex:1;
+			}
+		}
+	}
+}
